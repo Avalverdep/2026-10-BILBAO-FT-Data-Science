@@ -1,89 +1,90 @@
 import math
 
-def ejercicio_1(dia):
-    dias_semana = {1: "Lunes",
-               2: "Martes",
-               3: "Miércoles",
-               4: "Jueves",
-               5: "Viernes",
-               6: "Sábado",
-               7: "Domingo"}
-    return dias_semana.get(dia, "Día erróneo")
+def dias_semana(dia):
+    match dia:
+        case 1:
+            return "Lunes"
+        case 2:
+            return "Martes"
+        case 3:
+            return "Miércoles"
+        case 4:
+            return "Jueves"
+        case 5:
+            return "Viernes"
+        case 6:
+            return "Sábado"
+        case 7:
+            return "Domingo"
+        case _:
+            return "No coincide con un número de la semana correcto"
 
-def ejercicio_2(tamaño:int=5):
-    lista_8 = list(range(int(tamaño),0,-1))
-    while len(lista_8) > 0:
-        print(*lista_8)
-        lista_8.pop(0)
-
-def ejercicio_3(num_1, num_2):
-    if num_1 == num_2:
-        out = "Son iguales"
-    elif num_1 > num_2:
-        out = "Primer número mayor que segundo"
-    else:
-        out = "Segundo número mayor que primero"
-    return out
-
-def limpieza_texto(texto, dict_vocales={'á':'a',
-                                        'é':'e',
-                                        'í':'i',
-                                        'ó':'o',
-                                        'ú':'u'}):
-    texto = texto.lower()
-
-    for clave in dict_vocales:
-        texto = texto.replace(clave, dict_vocales[clave])
+def piramide_invertida(numero):
+    texto = ""
+    vueltas = numero + 1
+    for i in range (1, (numero) +1):
+        texto += "\n"
+        vueltas -= 1
+        for j in range(1, vueltas + 1):  
+            texto += " " + (str(j))
     return texto
 
-def ejercicio_4(frase, letra):
-    frase = limpieza_texto(frase)
-    return frase.count(letra.lower())
-
-def ejercicio_5(frase):
-
-    dict_conteo = {}
-    frase = limpieza_texto(frase)
-
-    for caracter in frase:
-        if caracter not in dict_conteo.keys() and caracter not in [" ", ","]:
-            dict_conteo[caracter] = frase.count(caracter)
-
-    return dict_conteo
-
-def ejercicio_6(lista, comando, elemento=None):
-    if comando == "add":
-        lista.append(elemento)
-    elif comando == "remove":
-        try:
-            lista.remove(elemento)
-        except:
-            print("El elemento no se encuentra en la lista")
+def comparar(num_1, num_2):
+    if num_1 > num_2:
+        return "El primer número es mayor al segundo"
+    elif num_1 < num_2:
+        return "El primer número es menor al segundo"
     else:
-        print("Comando no reconocido")
-    return lista
-
-def ejercicio_7(*args):
-    return " ".join(args)
-
-def fibonacci(n):
-    if n == 0 or n == 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-
-def cuadrado(l, n=1):
-    return round(n * l ** 2, 2)
-
-def triangulo(b, a):
-    return round(b * a / 2, 2)
-
-def circulo(r):
-    return round(math.pi * r ** 2, 2)
+        return "Ambos números son iguales"
 
 
+def contar_letras(texto, letra):
+    contador = 0
+    for i in texto:
+        if i.lower() == letra.lower():
+            contador += 1
+    return contador
 
-if __name__ == "__main__":
-    print(triangulo(3,7))
-    print(circulo(10))
-    print()
+
+def pasar_diccionario(string):
+    diccionario = {}
+    for i, j in enumerate(string):
+       diccionario[j] = i
+    return diccionario
+
+
+def anadir_eliminar(lista, comando, elemento):
+    try:
+        if not isinstance(lista, list) or comando.lower().strip() != "add" or comando.lower().strip != "remove":
+            print("Algun argumento es incorrecto")
+            if comando.lower().strip() == "add":
+                lista.append(elemento)
+            else:
+                lista.remove(elemento)
+        return lista
+    except Exception:
+        print("Parece que hay algún error")
+
+def frase(palabras):
+    texto = ""
+    for palabra in palabras:
+        texto += palabra + " "
+    return texto
+
+def Fibonacci(numero):
     
+    if numero <= 1:
+        return numero
+    
+    return Fibonacci(numero - 1) + Fibonacci(numero - 2)
+
+def area_cuadrado(lado):
+    return lado** 2
+
+def area_triangulo(base, altura):
+    return (base * altura) / 2
+
+def area_circulo(radio):
+    area = math.pi * (radio ** 2)
+    return float(area)
+

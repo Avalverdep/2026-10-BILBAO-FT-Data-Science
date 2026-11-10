@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tecnología: ¿evolución o involución?</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!-- El minifurrito: cruza la pantalla al cambiar de bloque -->
+<img id="furrito" src="img/furrito.svg" alt="">
+
+<!--
+  CÓMO SE NAVEGA
+  - Flecha derecha: siguiente bloque (diapositivas principales).
+  - Flecha abajo: diapositivas "extra" de ese bloque (las <section> anidadas).
+    Si vas justo de tiempo, te las saltas con la flecha derecha.
+-->
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- 1. PORTADA -->
+    <section data-bloque="portada">
+      <p class="antetitulo">Proyecto EDA · Data Science Bootcamp</p>
+      <h1>Tecnología:<br>¿evolución o involución?</h1>
+      <p class="subtitulo">Redes sociales, IA y comprensión lectora de los jóvenes europeos</p>
+      <p class="autor">Andoni · noviembre de 2026</p>
+    </section>
+
+    <!-- 2. POR QUÉ ESTE TEMA (celda 9) -->
+    <section data-bloque="intro">
+      <h2>La tecnología que nos acompañó</h2>
+      <img class="grafica" src="img/01_animal_crossing.png" alt="img/01_animal_crossing.png">
+      <p class="pie">20 de marzo de 2020: sale Animal Crossing, seis días después del estado de alarma.</p>
+      <aside class="notes">
+        Contar por qué me gusta el tema. Correlación de 0,89 entre tiempo en casa e interés por el juego,
+        pero las dos cosas pasaron a la vez: no demuestra causa. Primera lección del proyecto.
+      </aside>
+    </section>
+
+    <!-- 3. LA PREGUNTA -->
+    <section data-bloque="pregunta">
+      <h2>¿Todo uso de la tecnología suma?</h2>
+      <ol class="hipotesis">
+        <li class="fragment">Más uso problemático de redes, <strong>peor lectura</strong> en PISA.</li>
+        <li class="fragment">La caída coincide con el <strong>scroll infinito y el vídeo corto</strong>.</li>
+        <li class="fragment">La IA ayuda o perjudica según <strong>cómo se use</strong>.</li>
+      </ol>
+    </section>
+
+    <!-- 4. LECTURA PISA: UE, ESPAÑA Y COMPARACIÓN (celdas 16, 17 y 18) -->
+    <section>
+      <section data-bloque="pisa">
+        <h2>La lectura cae en Europa…</h2>
+        <img class="grafica" src="img/02_lectura_ue.png" alt="img/02_lectura_ue.png">
+        <aside class="notes">
+          Media de los 15 países con todas las ediciones (siempre los mismos, sin efecto composición).
+          Estable entre 493 y 499 de 2000 a 2018; 481 en 2022 y 463 en 2025.
+        </aside>
+      </section>
+      <section>
+        <h2>… y en España, más</h2>
+        <img class="grafica" src="img/03_lectura_espana.png" alt="img/03_lectura_espana.png">
+        <p class="cifra">España: <span class="contador" data-desde="0" data-hasta="-45">0</span> puntos desde 2015</p>
+        <aside class="notes">
+          495,6 en 2015 y 451 en 2025. Unos 20 puntos son un curso: algo más de dos cursos perdidos.
+          El bache de 2006 se recuperó; esta caída no. 2018: dato anulado por la OCDE.
+        </aside>
+      </section>
+      <section>
+        <h2>España frente a Europa</h2>
+        <img class="grafica" src="img/04_lectura_comparacion.png" alt="img/04_lectura_comparacion.png">
+        <aside class="notes">En 2015 España iguala a la UE (−0,4). Desde ahí caen las dos, España más deprisa.</aside>
+      </section>
+    </section>
+
+    <!-- 5. MATEMÁTICAS (celda 21) -->
+    <section>
+      <h2>Y no es solo leer: las matemáticas también</h2>
+      <img class="grafica" src="img/05_matematicas_comparacion.png" alt="img/05_matematicas_comparacion.png">
+      <aside class="notes">Mismo patrón: estable y caída fuerte desde 2018. ¿Problema de lectura o de atención en general?</aside>
+    </section>
+
+    <!-- 6. MAPA INTERACTIVO (nuevo, con Plotly) -->
+    <section data-bloque="redes">
+      <h2>El uso problemático de redes en Europa</h2>
+      <iframe class="interactiva" data-src="graficas/mapa.html" data-preload></iframe>
+      <aside class="notes">Pasar el ratón por España, Irlanda, Estonia y Rumanía.</aside>
+    </section>
+
+    <!-- 7. MÁS REDES, PEORES NOTAS: 2025 de principal, 2022 de extra (celdas 27, 23 y 25) -->
+    <section>
+      <section>
+        <h2>Más redes, peores notas</h2>
+        <img class="grafica" src="img/08_scatter_2025_Reading.png" alt="img/08_scatter_2025_Reading.png">
+        <aside class="notes">
+          2025: r = −0,40 en lectura y −0,52 en matemáticas (34 países). En 2022, −0,47 en lectura (33 países).
+          Relación moderada: no es destino.
+        </aside>
+      </section>
+      <section>
+        <h2>En matemáticas, incluso más</h2>
+        <img class="grafica" src="img/08_scatter_2025_Mathematics.png" alt="img/08_scatter_2025_Mathematics.png">
+      </section>
+      <section>
+        <h2>Y ya pasaba en 2022</h2>
+        <div class="dos">
+          <img class="grafica" src="img/06_scatter_2022_lectura.png" alt="img/06_scatter_2022_lectura.png">
+          <img class="grafica" src="img/07_scatter_2022_matematicas.png" alt="img/07_scatter_2022_matematicas.png">
+        </div>
+      </section>
+    </section>
+
+    <!-- 8. LAS EXCEPCIONES (se ven en los scatter: verde Irlanda, azul Estonia) -->
+    <section>
+      <h2>Las excepciones: Irlanda y Estonia</h2>
+      <div class="dos-columnas">
+        <div class="fragment">
+          <h3>Irlanda</h3>
+          <p>Mucho uso problemático de redes… y de los mejores lectores del mundo.</p>
+          <p class="pie">Estrategia nacional de lectura desde 2011 y una fuerte cultura lectora.</p>
+        </div>
+        <div class="fragment">
+          <h3>Estonia</h3>
+          <p>Uno de los países más digitales… y de los mejores lectores de Europa.</p>
+          <p class="pie">Equidad y docentes que deciden cuándo usar la tecnología.</p>
+        </div>
+      </div>
+      <p class="fragment lema">No es la pantalla, es el uso.</p>
+      <aside class="notes">Sugieren un camino, no lo demuestran: son dos países y una correlación.</aside>
+    </section>
+
+    <!-- 9. EL GIRO (celda 28) -->
+    <section>
+      <h2>El giro: los que menos usan, los que más caen</h2>
+      <img class="grafica" src="img/10_barras_grupos.png" alt="img/10_barras_grupos.png">
+      <aside class="notes">Bajo uso −21 puntos, uso medio −16, alto uso −7 (lectura). Matiza la hipótesis: lo cuento como hallazgo.</aside>
+    </section>
+
+    <!-- 10. DISEÑO ADICTIVO (celda 30; la tabla de la celda 29 va a la memoria) -->
+    <section data-bloque="denuncias">
+      <h2>El diseño adictivo y la reacción de la UE</h2>
+      <img class="grafica" src="img/11_hitos.png" alt="img/11_hitos.png">
+      <aside class="notes">
+        Coincidencia en el tiempo, no prueba de causa. 2026: conclusiones preliminares de la UE contra TikTok y Meta
+        (scroll infinito, autoplay, notificaciones). Aún sin multa.
+      </aside>
+    </section>
+
+    <!-- 11. IA: ESTUDIOS (celda 31) -->
+    <section data-bloque="ia">
+      <h2>IA: lo fácil gana hoy y pierde mañana</h2>
+      <img class="grafica" src="img/12_estudios_ia.png" alt="img/12_estudios_ia.png">
+      <aside class="notes">
+        Bastani: la IA que da el resultado, +48 % en la práctica y −17 % en el examen; la IA tutor, igual que sin IA en el examen.
+        Roediger: releer gana a los 5 minutos y pierde a la semana.
+      </aside>
+    </section>
+
+    <!-- 12. IA POR PAÍSES (celda 32) -->
+    <section>
+      <h2>¿Y los países que más IA usan?</h2>
+      <img class="grafica" src="img/13_ia_pisa.png" alt="img/13_ia_pisa.png">
+      <aside class="notes">Correlación positiva, pero probablemente es la riqueza. Usar IA no hunde las notas: depende del cómo.</aside>
+    </section>
+
+    <!-- 13. CONCLUSIONES -->
+    <section data-bloque="conclusiones">
+      <h2>¿Se cumplen las hipótesis?</h2>
+      <table class="veredicto">
+        <tr class="fragment"><td>1. Redes y lectura</td><td class="si">Sí, con fuerza moderada</td></tr>
+        <tr class="fragment"><td>2. Scroll y caída</td><td class="medias">A medias</td></tr>
+        <tr class="fragment"><td>3. IA según el uso</td><td class="si">Sí, según los estudios</td></tr>
+      </table>
+      <p class="fragment lema">No es la pantalla, es el uso.</p>
+    </section>
+
+    <!-- 14. LIMITACIONES Y FUTURO -->
+    <section>
+      <h2>Limitaciones y futuro</h2>
+      <ul>
+        <li>Correlación no es causalidad.</li>
+        <li>Datos por país, no por alumno.</li>
+        <li>La riqueza no está controlada.</li>
+        <li>HBSC es de 2022 y PISA, de 2025.</li>
+      </ul>
+      <p class="pie">Este proyecto está hecho con IA… usada como tutor, no como chuleta.</p>
+    </section>
+
+    <!-- ANEXO -->
+    <section>
+      <h2>Anexo: preguntas previstas</h2>
+      <ul class="pequeno">
+        <li>¿Y la pandemia? La caída empezó antes y sigue en 2025.</li>
+        <li>¿Por qué 15 países de la UE? Para comparar siempre los mismos.</li>
+        <li>¿Por qué no hay dato de España en 2018? La OCDE lo anuló.</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/animaciones.js"></script>
+</body>
+</html>

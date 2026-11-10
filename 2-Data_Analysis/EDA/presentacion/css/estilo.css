@@ -1,0 +1,90 @@
+/* Colores: los mismos que en las gráficas */
+:root {
+  --azul: #1f77b4;
+  --rojo: #d62728;
+  --verde: #2ca02c;
+  --naranja: #ff7f0e;
+  --gris: #6b6b6b;
+  --fondo: #fbfaf7;
+  --tinta: #1f2328;
+}
+
+.reveal-viewport { background: var(--fondo); }
+
+.reveal {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--tinta);
+  font-size: 34px;
+}
+
+.reveal h1, .reveal h2 {
+  font-family: inherit;
+  text-transform: none;
+  color: var(--tinta);
+  letter-spacing: -0.01em;
+}
+.reveal h1 { font-size: 2.3em; line-height: 1.1; }
+.reveal h2 { font-size: 1.35em; margin-bottom: 0.4em; }
+
+.antetitulo { color: var(--gris); font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.12em; }
+.subtitulo  { color: var(--azul); font-size: 0.85em; }
+.autor      { color: var(--gris); font-size: 0.6em; margin-top: 2em; }
+
+/* Gráficas */
+.reveal img.grafica {
+  max-height: 68vh;
+  max-width: 100%;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+}
+.reveal iframe.interactiva {
+  width: 100%;
+  height: 72vh;
+  border: none;
+}
+
+/* Hueco de una gráfica que aún no has exportado */
+.hueco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
+  border: 3px dashed #c9c9c9;
+  border-radius: 12px;
+  color: var(--gris);
+  font-size: 0.6em;
+}
+
+/* Dos gráficas lado a lado */
+.dos { display: flex; gap: 1em; justify-content: center; }
+.dos img.grafica { max-width: 49%; max-height: 60vh; }
+.dos .hueco { flex: 1; }
+
+/* Dos columnas de texto (Irlanda y Estonia) */
+.dos-columnas { display: flex; gap: 2em; text-align: left; }
+.dos-columnas > div { flex: 1; }
+.reveal h3 { font-family: inherit; font-size: 1em; color: var(--azul); text-transform: none; }
+
+.pie   { color: var(--gris); font-size: 0.55em; }
+.cifra { font-size: 0.8em; }
+.contador { color: var(--rojo); font-weight: 700; }
+.pequeno { font-size: 0.7em; }
+
+/* Hipótesis y veredicto */
+.hipotesis li { margin-bottom: 0.6em; }
+.veredicto { margin: 0 auto; font-size: 0.8em; }
+.veredicto td { padding: 0.4em 1em; border-bottom: 1px solid #ddd; }
+.veredicto .si     { color: var(--verde); font-weight: 700; }
+.veredicto .medias { color: var(--naranja); font-weight: 700; }
+.lema { font-size: 1.2em; font-weight: 700; color: var(--azul); margin-top: 1em; }
+
+/* El minifurrito: fuera de la pantalla hasta que GSAP lo mueve */
+#furrito {
+  position: fixed;
+  bottom: 12px;
+  left: -160px;
+  width: 120px;
+  z-index: 50;
+  pointer-events: none;
+}

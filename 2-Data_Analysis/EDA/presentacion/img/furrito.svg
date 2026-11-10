@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80">
+  <!-- cola -->
+  <path d="M10 50 C 0 30, 18 22, 30 38 L 34 46 Z" fill="#e8762b"/>
+  <path d="M6 40 C 4 32, 10 28, 16 31 C 12 34, 9 38, 6 40 Z" fill="#fff6ec"/>
+  <!-- cuerpo -->
+  <ellipse cx="55" cy="50" rx="26" ry="15" fill="#e8762b"/>
+  <ellipse cx="58" cy="56" rx="15" ry="7" fill="#fff6ec"/>
+  <!-- patas -->
+  <rect x="38" y="58" width="6" height="14" rx="3" fill="#5a3a22"/>
+  <rect x="48" y="60" width="6" height="12" rx="3" fill="#5a3a22"/>
+  <rect x="64" y="60" width="6" height="12" rx="3" fill="#5a3a22"/>
+  <rect x="74" y="58" width="6" height="14" rx="3" fill="#5a3a22"/>
+  <!-- cabeza -->
+  <path d="M74 38 L 82 16 L 90 32 L 98 16 L 104 40 C 112 44, 114 50, 104 54 C 96 58, 82 56, 76 50 Z" fill="#e8762b"/>
+  <path d="M83 22 L 86 30 L 80 30 Z" fill="#5a3a22"/>
+  <path d="M97 22 L 100 31 L 94 30 Z" fill="#5a3a22"/>
+  <path d="M96 46 C 104 46, 112 48, 113 50 C 108 54, 100 54, 94 52 Z" fill="#fff6ec"/>
+  <circle cx="91" cy="41" r="2.4" fill="#1f2328"/>
+  <circle cx="113" cy="50" r="2.2" fill="#1f2328"/>
+</svg>

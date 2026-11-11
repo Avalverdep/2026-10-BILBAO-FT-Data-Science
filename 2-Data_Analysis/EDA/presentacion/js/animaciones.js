@@ -54,10 +54,35 @@ function animaContadores(diapositiva) {
   });
 }
 
+// Cuadros de texto (class="cuadro-info") que aparecen a los data-retraso segundos
+function muestraCuadros(diapositiva) {
+  diapositiva.querySelectorAll('.cuadro-info').forEach((cuadro) => {
+    gsap.killTweensOf(cuadro);
+    gsap.fromTo(cuadro,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+        delay: Number(cuadro.dataset.retraso || 20) });
+  });
+}
+
+// Al salir de la diapositiva se esconden, para que vuelvan a salir si regresas
+function escondeCuadros(diapositiva) {
+  if (!diapositiva) return;
+  diapositiva.querySelectorAll('.cuadro-info').forEach((cuadro) => {
+    gsap.killTweensOf(cuadro);
+    gsap.set(cuadro, { opacity: 0 });
+  });
+}
+
 Reveal.on('slidechanged', (evento) => {
   const diapositiva = evento.currentSlide;
   if (diapositiva.dataset.bloque && diapositiva.dataset.bloque !== 'portada') {
     cruzaElFurrito();
   }
   animaContadores(diapositiva);
+  escondeCuadros(evento.previousSlide);
+  muestraCuadros(diapositiva);
 });
+
+// Si recargas (F5) estando ya en una diapositiva, slidechanged no salta: esto lo cubre
+Reveal.on('ready', (evento) => muestraCuadros(evento.currentSlide));

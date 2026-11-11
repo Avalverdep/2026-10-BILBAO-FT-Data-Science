@@ -35,7 +35,7 @@
     <!-- 2. POR QUÉ ESTE TEMA (celda 9) -->
     <section data-bloque="intro">
       <h2>La tecnología que nos acompañó</h2>
-      <img class="grafica" src="img/01_animal_crossing.png" alt="img/01_animal_crossing.png">
+      <img class="grafica tarjeta" src="img/01_animal_crossing.png" alt="img/01_animal_crossing.png">
       <p class="pie">20 de marzo de 2020: sale Animal Crossing, seis días después del estado de alarma.</p>
       <aside class="notes">
         Contar por qué me gusta el tema. Correlación de 0,89 entre tiempo en casa e interés por el juego,
@@ -55,17 +55,23 @@
 
     <!-- 4. LECTURA PISA: UE, ESPAÑA Y COMPARACIÓN (celdas 16, 17 y 18) -->
     <section>
-      <section data-bloque="pisa">
-        <h2>La lectura cae en Europa…</h2>
-        <img class="grafica" src="img/02_lectura_ue.png" alt="img/02_lectura_ue.png">
-        <aside class="notes">
-          Media de los 15 países con todas las ediciones (siempre los mismos, sin efecto composición).
-          Estable entre 493 y 499 de 2000 a 2018; 481 en 2022 y 463 en 2025.
-        </aside>
-      </section>
+  <section data-bloque="pisa">
+  <h2>La lectura cae en Europa…</h2>
+  <div class="lienzo">
+    <img class="grafica arriba-izq tarjeta" src="img/02_lectura_ue.png" alt="img/02_lectura_ue.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>Los informes de lectura han dado resultados estables durante los últimos años</strong> entre 493 y 499 puntos.</p>
+      <p><strong>Desde 2018:</strong> han sufrido una bajada de hasta −30 puntos.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Media de los 15 países con todas las ediciones (siempre los mismos, sin efecto composición).
+    Estable entre 493 y 499 de 2000 a 2018; 481 en 2022 y 463 en 2025.
+  </aside>
+</section>
       <section>
         <h2>… y en España, más</h2>
-        <img class="grafica" src="img/03_lectura_espana.png" alt="img/03_lectura_espana.png">
+        <img class="grafica tarjeta" src="img/03_lectura_espana.png" alt="img/03_lectura_espana.png">
         <p class="cifra">España: <span class="contador" data-desde="0" data-hasta="-45">0</span> puntos desde 2015</p>
         <aside class="notes">
           495,6 en 2015 y 451 en 2025. Unos 20 puntos son un curso: algo más de dos cursos perdidos.
@@ -74,30 +80,46 @@
       </section>
       <section>
         <h2>España frente a Europa</h2>
-        <img class="grafica" src="img/04_lectura_comparacion.png" alt="img/04_lectura_comparacion.png">
+        <img class="grafica tarjeta" src="img/04_lectura_comparacion.png" alt="img/04_lectura_comparacion.png">
         <aside class="notes">En 2015 España iguala a la UE (−0,4). Desde ahí caen las dos, España más deprisa.</aside>
       </section>
     </section>
 
     <!-- 5. MATEMÁTICAS (celda 21) -->
-    <section>
-      <h2>Y no es solo leer: las matemáticas también</h2>
-      <img class="grafica" src="img/05_matematicas_comparacion.png" alt="img/05_matematicas_comparacion.png">
-      <aside class="notes">Mismo patrón: estable y caída fuerte desde 2018. ¿Problema de lectura o de atención en general?</aside>
-    </section>
+    <!-- 5. MATEMÁTICAS (celda 21) -->
+<section>
+  <h2>Y no es solo leer: las matemáticas también</h2>
+  <div class="lienzo">
+    <img class="grafica tarjeta arriba-izq" src="img/05_matematicas_comparacion.png" alt="img/05_matematicas_comparacion.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>Los datos siguen un mismo patrón:</strong> el nivel de matemáticas era estable hasta el año 2018.</p>
+      <p><strong>Europa:</strong> -29 puntos.</p>
+      <p><strong>España:</strong> -24 puntos.</p>
+      <p><strong>Tanto España como Europa siguen el mismo patrón en la caída de los informes.</strong> ¿Problema de lectura… o de atención en general?</p>
+    </div>
+  </div>
+  <aside class="notes">Mismo patrón: estable y caída fuerte desde 2018. ¿Problema de lectura o de atención en general?</aside>
+</section>
 
     <!-- 6. MAPA INTERACTIVO (nuevo, con Plotly) -->
-    <section data-bloque="redes">
-      <h2>El uso problemático de redes en Europa</h2>
-      <iframe class="interactiva" data-src="graficas/mapa.html" data-preload></iframe>
-      <aside class="notes">Pasar el ratón por España, Irlanda, Estonia y Rumanía.</aside>
-    </section>
+<section data-bloque="redes">
+  <h2>El uso problemático de redes en Europa</h2>
+  <div class="lienzo">
+    <iframe class="interactiva tarjeta arriba-der" data-src="graficas/mapa.html" data-preload></iframe>
+    <div class="cuadro-info arriba-izq" data-retraso="5">
+      <p><strong>Mapa de calor,</strong> Cuanto más rojo esté cada país, tiene un mayor problema con las redes según el informe (HBSC 2022).</p>
+      <p><strong>Correlación de datos: </strong> se puede observar la caída en los informes de matemáticas y lectura en su conjunto.</p>
+      <strong>Irlanda</strong> y <strong>Estonia </strong>Casos especiales que se tratan como Outliers en este estudio.</p>
+    </div>
+  </div>
+  <aside class="notes">Pasar el ratón por España, Irlanda, Estonia y Rumanía.</aside>
+</section>
 
     <!-- 7. MÁS REDES, PEORES NOTAS: 2025 de principal, 2022 de extra (celdas 27, 23 y 25) -->
     <section>
       <section>
         <h2>Más redes, peores notas</h2>
-        <img class="grafica" src="img/08_scatter_2025_Reading.png" alt="img/08_scatter_2025_Reading.png">
+        <img class="grafica tarjeta" src="img/08_scatter_2025_Reading.png" alt="img/08_scatter_2025_Reading.png">
         <aside class="notes">
           2025: r = −0,40 en lectura y −0,52 en matemáticas (34 países). En 2022, −0,47 en lectura (33 países).
           Relación moderada: no es destino.
@@ -105,13 +127,13 @@
       </section>
       <section>
         <h2>En matemáticas, incluso más</h2>
-        <img class="grafica" src="img/08_scatter_2025_Mathematics.png" alt="img/08_scatter_2025_Mathematics.png">
+        <img class="grafica tarjeta" src="img/08_scatter_2025_Mathematics.png" alt="img/08_scatter_2025_Mathematics.png">
       </section>
       <section>
         <h2>Y ya pasaba en 2022</h2>
         <div class="dos">
-          <img class="grafica" src="img/06_scatter_2022_lectura.png" alt="img/06_scatter_2022_lectura.png">
-          <img class="grafica" src="img/07_scatter_2022_matematicas.png" alt="img/07_scatter_2022_matematicas.png">
+          <img class="grafica tarjeta" src="img/06_scatter_2022_lectura.png" alt="img/06_scatter_2022_lectura.png">
+          <img class="grafica tarjeta" src="img/07_scatter_2022_matematicas.png" alt="img/07_scatter_2022_matematicas.png">
         </div>
       </section>
     </section>
@@ -138,14 +160,14 @@
     <!-- 9. EL GIRO (celda 28) -->
     <section>
       <h2>El giro: los que menos usan, los que más caen</h2>
-      <img class="grafica" src="img/10_barras_grupos.png" alt="img/10_barras_grupos.png">
+      <img class="grafica tarjeta" src="img/10_barras_grupos.png" alt="img/10_barras_grupos.png">
       <aside class="notes">Bajo uso −21 puntos, uso medio −16, alto uso −7 (lectura). Matiza la hipótesis: lo cuento como hallazgo.</aside>
     </section>
 
     <!-- 10. DISEÑO ADICTIVO (celda 30; la tabla de la celda 29 va a la memoria) -->
     <section data-bloque="denuncias">
       <h2>El diseño adictivo y la reacción de la UE</h2>
-      <img class="grafica" src="img/11_hitos.png" alt="img/11_hitos.png">
+      <img class="grafica tarjeta" src="img/11_hitos.png" alt="img/11_hitos.png">
       <aside class="notes">
         Coincidencia en el tiempo, no prueba de causa. 2026: conclusiones preliminares de la UE contra TikTok y Meta
         (scroll infinito, autoplay, notificaciones). Aún sin multa.
@@ -155,7 +177,7 @@
     <!-- 11. IA: ESTUDIOS (celda 31) -->
     <section data-bloque="ia">
       <h2>IA: lo fácil gana hoy y pierde mañana</h2>
-      <img class="grafica" src="img/12_estudios_ia.png" alt="img/12_estudios_ia.png">
+      <img class="grafica tarjeta" src="img/12_estudios_ia.png" alt="img/12_estudios_ia.png">
       <aside class="notes">
         Bastani: la IA que da el resultado, +48 % en la práctica y −17 % en el examen; la IA tutor, igual que sin IA en el examen.
         Roediger: releer gana a los 5 minutos y pierde a la semana.
@@ -165,7 +187,7 @@
     <!-- 12. IA POR PAÍSES (celda 32) -->
     <section>
       <h2>¿Y los países que más IA usan?</h2>
-      <img class="grafica" src="img/13_ia_pisa.png" alt="img/13_ia_pisa.png">
+      <img class="grafica tarjeta" src="img/13_ia_pisa.png" alt="img/13_ia_pisa.png">
       <aside class="notes">Correlación positiva, pero probablemente es la riqueza. Usar IA no hunde las notas: depende del cómo.</aside>
     </section>
 

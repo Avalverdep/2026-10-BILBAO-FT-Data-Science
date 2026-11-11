@@ -4,12 +4,14 @@
   --rojo: #d62728;
   --verde: #2ca02c;
   --naranja: #ff7f0e;
-  --gris: #6b6b6b;
-  --fondo: #fbfaf7;
-  --tinta: #1f2328;
+  --gris: #F2EBEB;
+  --fondo: #D5DBE3;
+  --tinta: #F2EBEB;
 }
 
-.reveal-viewport { background: var(--fondo); }
+.reveal-viewport {
+  background: url('txt_fondo.png'), linear-gradient(135deg, #D7DEDB, #232a36);
+}
 
 .reveal {
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -32,11 +34,12 @@
 
 /* Gráficas */
 .reveal img.grafica {
-  max-height: 68vh;
-  max-width: 100%;
+  max-height: 45vh;
+  max-width: 65%;
   border: none;
   box-shadow: none;
   margin: 0 auto;
+ 
 }
 .reveal iframe.interactiva {
   width: 100%;
@@ -88,3 +91,40 @@
   z-index: 50;
   pointer-events: none;
 }
+
+.reveal img.tarjeta {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(242, 235, 235, 0.85);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  background: url("txt_wood.png"), rgba(56, 54, 54, 0.85);
+}
+
+/* ===== Lienzo: zona donde se colocan cosas en las esquinas ===== */
+.lienzo { position: relative; height: 560px; }
+
+/* Las gráficas dentro del lienzo, más pequeñas para dejar sitio */
+.reveal .lienzo img.grafica { max-width: 64%; max-height: 420px; margin: 0; }
+
+/* Clases de posición: sirven para gráficas, cuadros o lo que sea */
+.arriba-izq { position: absolute; top: 0;    left: 0;  }
+.arriba-der { position: absolute; top: 0;    right: 0; }
+.abajo-izq  { position: absolute; bottom: 0; left: 0;  }
+.abajo-der  { position: absolute; bottom: 0; right: 0; }
+
+/* ===== Cuadro de texto que aparece solo (reutilizable) ===== */
+.cuadro-info {
+  width: 38%;
+  text-align: left;
+  background: rgba(20, 22, 27, 0.5);
+  color: #F2EBEB;
+  padding: 0.8em 1em;
+  border-radius: 14px;
+  font-size: 0.55em;
+  line-height: 1.4;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  opacity: 0;            /* empieza invisible, GSAP lo hace aparecer */
+}
+
+/* Mapa dentro del lienzo: más estrecho para dejar hueco al cuadro */
+.reveal .lienzo iframe.interactiva { width: 64%; height: 100%; }

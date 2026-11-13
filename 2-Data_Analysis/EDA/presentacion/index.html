@@ -11,8 +11,6 @@
 </head>
 <body>
 
-<!-- El minifurrito: cruza la pantalla al cambiar de bloque -->
-<img id="furrito" src="img/furrito.svg" alt="">
 
 <!--
   CÓMO SE NAVEGA
@@ -29,7 +27,7 @@
       <p class="antetitulo">Proyecto EDA · Data Science Bootcamp</p>
       <h1>Tecnología:<br>¿evolución o involución?</h1>
       <p class="subtitulo">Redes sociales, IA y comprensión lectora de los jóvenes europeos</p>
-      <p class="autor">Andoni · noviembre de 2026</p>
+      <p class="autor">Andoni Valverde</p>
     </section>
 
     <!-- 2. POR QUÉ ESTE TEMA (celda 9) -->
@@ -85,7 +83,7 @@
       </section>
     </section>
 
-    <!-- 5. MATEMÁTICAS (celda 21) -->
+
     <!-- 5. MATEMÁTICAS (celda 21) -->
 <section>
   <h2>Y no es solo leer: las matemáticas también</h2>
@@ -116,27 +114,49 @@
 </section>
 
     <!-- 7. MÁS REDES, PEORES NOTAS: 2025 de principal, 2022 de extra (celdas 27, 23 y 25) -->
-    <section>
-      <section>
-        <h2>Más redes, peores notas</h2>
-        <img class="grafica tarjeta" src="img/08_scatter_2025_Reading.png" alt="img/08_scatter_2025_Reading.png">
-        <aside class="notes">
-          2025: r = −0,40 en lectura y −0,52 en matemáticas (34 países). En 2022, −0,47 en lectura (33 países).
-          Relación moderada: no es destino.
-        </aside>
-      </section>
-      <section>
-        <h2>En matemáticas, incluso más</h2>
-        <img class="grafica tarjeta" src="img/08_scatter_2025_Mathematics.png" alt="img/08_scatter_2025_Mathematics.png">
-      </section>
-      <section>
-        <h2>Y ya pasaba en 2022</h2>
-        <div class="dos">
-          <img class="grafica tarjeta" src="img/06_scatter_2022_lectura.png" alt="img/06_scatter_2022_lectura.png">
-          <img class="grafica tarjeta" src="img/07_scatter_2022_matematicas.png" alt="img/07_scatter_2022_matematicas.png">
-        </div>
-      </section>
-    </section>
+   <!-- 7. MÁS REDES, PEORES NOTAS: 2025 de principal, 2022 de extra -->
+<section>
+  <section>
+    <h2>Más redes, peores notas</h2>
+    <div class="lienzo">
+      <img class="grafica tarjeta arriba-izq" src="img/08_scatter_2025_Reading.png" alt="img/08_scatter_2025_Reading.png">
+      <div class="cuadro-info abajo-der" data-retraso="5">
+        <p><strong>34 países:</strong> Cuanto más uso intensivo de las RRSS, peores datos de lectura en el informe PISA.</p>
+        <p><strong>r = −0,40:</strong> relación moderada. Muestra una tendencia progresiva.</p>
+        <p>Aunque hay algunos casos excepcionaes como Irlanda y Estonia</p>
+      </div>
+    </div>
+    <aside class="notes">
+      2025: r = −0,40 en lectura y −0,52 en matemáticas (34 países). En 2022, −0,47 en lectura (33 países).
+      Relación moderada.
+    </aside>
+  </section>
+
+  <section>
+    <h2>En matemáticas, incluso más</h2>
+    <div class="lienzo">
+      <img class="grafica tarjeta arriba-izq" src="img/08_scatter_2025_Mathematics.png" alt="img/08_scatter_2025_Mathematics.png">
+      <div class="cuadro-info abajo-der" data-retraso="5">
+        <p><strong>r = −0,52:</strong> Muestra una de las relaciones más fuertes del análisis</p>
+        <p>No parece solo un problema de leer, sino de <strong>concentración</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>En los datos de 2022 ya se podía observar esta tendencia</h2>
+    <div class="lienzo">
+      <div class="dos arriba-izq">
+        <img class="grafica tarjeta" src="img/06_scatter_2022_lectura.png" alt="img/06_scatter_2022_lectura.png">
+        <img class="grafica tarjeta" src="img/07_scatter_2022_matematicas.png" alt="img/07_scatter_2022_matematicas.png">
+      </div>
+      <div class="cuadro-info ancho abajo-centro" data-retraso="5">
+        <p><strong>Con PISA 2022 ya estaba ahí:</strong> los datos mostraban una tendencia descendiente de las capacidades de los jóvenes dentro del auge del Scroll infinito</p>
+        <p>Son dos ediciones distintas con el mismo patrón</p>
+      </div>
+    </div>
+  </section>
+</section>
 
     <!-- 8. LAS EXCEPCIONES (se ven en los scatter: verde Irlanda, azul Estonia) -->
     <section>
@@ -144,8 +164,8 @@
       <div class="dos-columnas">
         <div class="fragment">
           <h3>Irlanda</h3>
-          <p>Mucho uso problemático de redes… y de los mejores lectores del mundo.</p>
-          <p class="pie">Estrategia nacional de lectura desde 2011 y una fuerte cultura lectora.</p>
+          <p>Tiene uno de los usos más problemáticos con Redes de Europa, pero muestra grandes datos en Lectura.</p>
+          <p class="pie">El país posee una estrategia nacional de lectura desde 2011 y una fuerte cultura lectora.</p>
         </div>
         <div class="fragment">
           <h3>Estonia</h3>
@@ -153,43 +173,82 @@
           <p class="pie">Equidad y docentes que deciden cuándo usar la tecnología.</p>
         </div>
       </div>
-      <p class="fragment lema">No es la pantalla, es el uso.</p>
+      <p class="fragment lema">La educación en el uso de RRSS es importante a edades tempranas.</p>
       <aside class="notes">Sugieren un camino, no lo demuestran: son dos países y una correlación.</aside>
     </section>
 
     <!-- 9. EL GIRO (celda 28) -->
-    <section>
-      <h2>El giro: los que menos usan, los que más caen</h2>
-      <img class="grafica tarjeta" src="img/10_barras_grupos.png" alt="img/10_barras_grupos.png">
-      <aside class="notes">Bajo uso −21 puntos, uso medio −16, alto uso −7 (lectura). Matiza la hipótesis: lo cuento como hallazgo.</aside>
-    </section>
+    <!-- 9. EL GIRO (celda 28) -->
+<section>
+  <h2>El giro: los que menos usan, los que más caen</h2>
+  <div class="lienzo">
+    <img class="grafica tarjeta arriba-izq" src="img/10_barras_grupos.png" alt="img/10_barras_grupos.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>Bajo uso:</strong> 481 → 460 (−21)</p>
+      <p><strong>Uso medio:</strong> 466 → 450 (−16)</p>
+      <p><strong>Alto uso:</strong> 435 → 428 (−7)</p>
+      <p>Los países que más redes usan siguen abajo pero <strong>Pero los países que menos problemas con redes tienen, sufren una caída más acentuada.</strong>.</p>
+    </div>
+  </div>
+  <aside class="notes">Bajo uso −21 puntos, uso medio −16, alto uso −7 (lectura). Matiza la hipótesis: lo cuento como hallazgo.</aside>
+</section>
 
-    <!-- 10. DISEÑO ADICTIVO (celda 30; la tabla de la celda 29 va a la memoria) -->
-    <section data-bloque="denuncias">
-      <h2>El diseño adictivo y la reacción de la UE</h2>
-      <img class="grafica tarjeta" src="img/11_hitos.png" alt="img/11_hitos.png">
-      <aside class="notes">
-        Coincidencia en el tiempo, no prueba de causa. 2026: conclusiones preliminares de la UE contra TikTok y Meta
-        (scroll infinito, autoplay, notificaciones). Aún sin multa.
-      </aside>
-    </section>
+    <!-- 10. DISEÑO ADICTIVO (celda 32; la tabla de la celda 31 va a la memoria) -->
+<section data-bloque="denuncias">
+  <h2>El diseño adictivo y la reacción de la UE</h2>
+  <div class="lienzo">
+    <img class="grafica tarjeta arriba-izq" src="img/11_hitos.png" alt="img/11_hitos.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>2015 → 2018:</strong> En esta franja de años, la UE apenas nota cambios en los informes (496 → 493).</p>
+      <p><strong>2022, año de popularización de TikTok, Reels, Shorts…</strong> la caída se acelera: 481 en 2022 y 463 en 2025.</p>
+      <p><strong>La caída se agrava año a año.</strong></p>
+      <p class="pie">2026: conclusiones preliminares de la UE contra TikTok y Meta por diseño adictivo. Aún sin multa.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    Coincidencia en el tiempo, no prueba de causa. 2026: conclusiones preliminares de la UE contra TikTok y Meta
+    (scroll infinito, autoplay, notificaciones). Aún sin multa.
+    Hipótesis 2 a medias: antes de la pandemia solo bajó 3 puntos; la caída fuerte es de 2018 en adelante,
+    y sigue entre 2022 y 2025, ya sin confinamientos.
+  </aside>
+</section>
 
-    <!-- 11. IA: ESTUDIOS (celda 31) -->
-    <section data-bloque="ia">
-      <h2>IA: lo fácil gana hoy y pierde mañana</h2>
-      <img class="grafica tarjeta" src="img/12_estudios_ia.png" alt="img/12_estudios_ia.png">
-      <aside class="notes">
-        Bastani: la IA que da el resultado, +48 % en la práctica y −17 % en el examen; la IA tutor, igual que sin IA en el examen.
-        Roediger: releer gana a los 5 minutos y pierde a la semana.
-      </aside>
-    </section>
+    <!-- 11. IA: ESTUDIOS (celda 33) -->
+<section data-bloque="ia">
+  <h2>IA: lo fácil gana hoy y pierde mañana</h2>
+  <div class="lienzo">
+    <img class="grafica tarjeta arriba-izq" src="img/12_estudios_ia.png" alt="img/12_estudios_ia.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>Ejercitando la memoria:</strong> a medio plazo se demuestra que el esfuerzo en lectura mejora los resultados frente a las lecturas rapidas sin retención real de conocimientos..</p>
+      <p><strong>Uso de Inteligencia Artificial</strong> Resultados del estudio demuestran que el uso responsable mejora los resultados académicos. El uso con intención de resultados instantáneos perjudica a largo plazo.</p>
+     
+    </div>
+  </div>
+  <aside class="notes">
+    Bastani et al. (2025, PNAS): unos mil alumnos de secundaria en Turquía, matemáticas.
+    Roediger y Karpicke (2006): releer frente a practicar el recuerdo.
+    Lo fácil rinde hoy y se paga mañana: el esfuerzo es lo que fija.
+  </aside>
+</section>
 
-    <!-- 12. IA POR PAÍSES (celda 32) -->
-    <section>
-      <h2>¿Y los países que más IA usan?</h2>
-      <img class="grafica tarjeta" src="img/13_ia_pisa.png" alt="img/13_ia_pisa.png">
-      <aside class="notes">Correlación positiva, pero probablemente es la riqueza. Usar IA no hunde las notas: depende del cómo.</aside>
-    </section>
+    <!-- 12. IA POR PAÍSES (celda 34) -->
+<section>
+  <h2>¿Y los países que más IA usan?</h2>
+  <div class="lienzo">
+    <img class="grafica tarjeta arriba-izq" src="img/13_ia_pisa.png" alt="img/13_ia_pisa.png">
+    <div class="cuadro-info abajo-der" data-retraso="5">
+      <p><strong>Los países donde se ha generalizado el uso de IA en el ámbito académico: </strong> los jóvenes muestran unos mejores notas (r = +0,30 en lectura y +0,45 en matemáticas).</p>
+      <p><strong>¿La IA sube la nota?</strong> No podemos aventurarnos a esa afirmación.<em>y</em>Cada país es un caso único, y la fuerza de la digitalización no se aplica por igual.</p>
+      <p>Grecia y Estonia usan IA casi por igual (83 %)… y les separan 76 puntos en lectura.</p>
+    </div>
+  </div>
+  <aside class="notes">
+    31 países. España: 75,6 % de jóvenes de 16 a 24 años usan IA generativa; 451 en lectura.
+    Eurostat mide de 16 a 24 años y PISA, a los de 15: no son exactamente los mismos jóvenes.
+    La riqueza no está controlada: está en limitaciones.
+    Cuadra con los estudios: la IA en sí no hunde las notas; depende de cómo se use.
+  </aside>
+</section>
 
     <!-- 13. CONCLUSIONES -->
     <section data-bloque="conclusiones">
@@ -208,18 +267,17 @@
       <ul>
         <li>Correlación no es causalidad.</li>
         <li>Datos por país, no por alumno.</li>
-        <li>La riqueza no está controlada.</li>
         <li>HBSC es de 2022 y PISA, de 2025.</li>
       </ul>
-      <p class="pie">Este proyecto está hecho con IA… usada como tutor, no como chuleta.</p>
+      <p class="pie">Este proyecto ha tenido colaboración de Claude como tutor, no como único autor.</p>
     </section>
 
     <!-- ANEXO -->
     <section>
       <h2>Anexo: preguntas previstas</h2>
       <ul class="pequeno">
-        <li>¿Y la pandemia? La caída empezó antes y sigue en 2025.</li>
-        <li>¿Por qué 15 países de la UE? Para comparar siempre los mismos.</li>
+        <li>¿Y la pandemia? La caída de los datos empezó antes y sigue en 2025.</li>
+        <li>¿Por qué 15 países de la UE? No todos los países de la UE participan en todos los informes PISA, se han seleccionado los que si lo hacen.</li>
         <li>¿Por qué no hay dato de España en 2018? La OCDE lo anuló.</li>
       </ul>
     </section>

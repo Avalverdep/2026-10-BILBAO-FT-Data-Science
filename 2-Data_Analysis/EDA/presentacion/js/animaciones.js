@@ -22,24 +22,9 @@ document.querySelectorAll('img.grafica').forEach((img) => {
   }
 });
 
-// El minifurrito cruza la pantalla al llegar a una diapositiva que empieza bloque (data-bloque)
-function cruzaElFurrito() {
-  const furrito = document.getElementById('furrito');
-  gsap.killTweensOf(furrito);
-  gsap.fromTo(furrito,
-    { x: 0, y: 0 },
-    {
-      x: window.innerWidth + 320,
-      duration: 1.6,
-      ease: 'power1.inOut',
-      // pequeños saltitos mientras corre
-      onUpdate() {
-        const avance = this.progress();
-        gsap.set(furrito, { y: -Math.abs(Math.sin(avance * Math.PI * 6)) * 14 });
-      },
-    }
-  );
-}
+
+
+
 
 // Los contadores (class="contador") van del valor data-desde al data-hasta
 function animaContadores(diapositiva) {
@@ -76,9 +61,6 @@ function escondeCuadros(diapositiva) {
 
 Reveal.on('slidechanged', (evento) => {
   const diapositiva = evento.currentSlide;
-  if (diapositiva.dataset.bloque && diapositiva.dataset.bloque !== 'portada') {
-    cruzaElFurrito();
-  }
   animaContadores(diapositiva);
   escondeCuadros(evento.previousSlide);
   muestraCuadros(diapositiva);
